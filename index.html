@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Cookie</title>
+    <link rel="stylesheet" href="style/css/bootstrap.min.css">
+</head>
+
+<body id="bgcolor">
+    <header>
+        <div class="navbar bg-dark justify-content-center">
+            <h1 class="text-white">Тестим куки и localStorage</h1>
+        </div>
+    </header>
+
+    <main class="justify-content-center">
+<!--        добавление файла аудио-->
+        <div class="input-group justify-content-center ml-auto mr-auto w-50 mt-5">
+            <input type="text" class="form-control" id="text">
+            <input type="file" class="btn btn-outline-primary " id="file">
+<!--            добавляет панель управление аудио файлам-->
+            <audio controls></audio>
+        </div>
+
+        <div class="d-flex justify-content-end mt-2">
+            <p class="mr-2">Ваш город:</p>
+            <span id="city" class="d-flex justify-content-end mr-2" style="width: auto"></span>
+        </div>
+        <div class="d-flex justify-content-end">
+            <a class="badge badge-primary mr-2" id="badge" href="">Сбросить город</a>
+        </div>
+        <div class="input-group justify-content-center ml-auto mr-auto w-75 mt-5 " >
+            <input type="text" id="inputCity" class="form-control" placeholder="Введите ваш город?" aria-label="Имя получателя" aria-describedby="basic-addon2">
+            <div class="input-group-append">
+                <button id="btnCity" class="btn btn-outline-secondary" type="button">Запомнить</button>
+            </div>
+        </div>
+
+
+<!--        ВВОД-->
+        <div class=" mt-5 ml-5">
+            <textarea  class="form-control" style="width:200px; height: 60px;" id="area" placeholder="Напишите сообщение здесь"></textarea>
+            <br>
+            <button class="btn btn-outline-secondary" onclick="localStorage.clear(); area.value=''">Очистить</button>
+        </div>
+
+
+
+        <section>
+            <div class="custom-control custom-checkbox d-flex flex-column ml-5 mt-5">
+                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                <label class="custom-control-label" for="customCheck1">Не звонить мне</label>
+            </div>
+            <div class="custom-control custom-checkbox d-flex flex-column ml-5 mt-2">
+                <input type="checkbox" class="custom-control-input" id="customCheck2">
+                <label class="custom-control-label" for="customCheck2">Я прочитал и согласен с правилами пользования сервисом</label>
+            </div>
+            <div class="custom-control custom-checkbox d-flex flex-column ml-5 mt-2">
+                <input type="checkbox" class="custom-control-input" id="customCheck3">
+                <label class="custom-control-label" for="customCheck3">Я не выбираю эту галочку</label>
+            </div>
+            <div class="custom-control custom-checkbox d-flex flex-column ml-5 mt-2">
+                <input type="checkbox" class="custom-control-input" id="customCheck4">
+                <label class="custom-control-label" for="customCheck4">Я подтверждаю, что свобода в интернете — это возможность выбирать галочки</label>
+            </div>
+            <div class="custom-control custom-checkbox d-flex flex-column ml-5 mt-2">
+                <input type="checkbox" class="custom-control-input" id="customCheck5">
+                <label class="custom-control-label" for="customCheck5">Мне больше 12 лет</label>
+            </div>
+            <div class="custom-control custom-checkbox d-flex flex-column ml-5 mt-2">
+                <input type="checkbox" class="custom-control-input" id="customCheck6">
+                <label class="custom-control-label" for="customCheck6">Это задание выполнено правильно</label>
+            </div>
+            <button class="btn btn-success ml-5 mt-3" id="saveCheck">Сохранить</button>
+        </section>
+
+<!--        <script type="text/javascript" src="src/index.js"></script>-->
+
+        <script type="text/javascript" src="src/main.js"></script>
+        <script type="text/javascript" src="src/audio.js"></script>
+    </main>
+</body>
+</html>
